@@ -3,26 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rosa Pink Lingerie & Sexshop | Links Oficiais</title>
+  <title>Rosa Pink Lingerie & Sexshop</title>
   
-  <!-- Fontes -->
+  <!-- Fontes: Garamond e Cursiva Elegante (Great Vibes / Sloop fallback) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Ícones Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
+    /* ================= PALETA DE CORES & TIPOGRAFIA ================= */
     :root {
-      --bg-color: #0b0b0e;
-      --card-bg: rgba(255, 255, 255, 0.05);
-      --card-border: rgba(255, 255, 255, 0.08);
-      --pink-primary: #e0218a;
-      --pink-hover: #ff3399;
-      --text-main: #f5f5f7;
-      --text-muted: #9e9ea7;
-      --green-whatsapp: #25d366;
+      --pink-vibrant: #ff00af;         /* Rosa oficial extraído da logo */
+      --pink-soft: #fff0f7;            /* Rosa bebê suave de fundo */
+      --pink-light: #fce4ec;           /* Tom pastel intermediário */
+      --pink-border: rgba(255, 0, 175, 0.25);
+      --pink-glow: rgba(255, 0, 175, 0.22);
+      --white: #ffffff;
+      --text-dark: #221c20;
+      --text-muted: #6e6469;
+      --green-wpp: #25d366;
+      --shadow-card: 0 10px 30px rgba(255, 0, 175, 0.08);
+
+      --font-serif: "Apple Garamond", "Cormorant Garamond", Garamond, "Times New Roman", serif;
+      --font-script: "Sloop", "Sloop Script", "Great Vibes", cursive;
+      --font-ui: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     * {
@@ -33,352 +40,544 @@
     }
 
     body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-main);
+      font-family: var(--font-ui);
+      background-color: var(--pink-soft);
+      color: var(--text-dark);
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 18px 30px;
+      justify-content: center;
+      padding: 24px 16px 40px;
       background-image: 
-        radial-gradient(circle at 50% 0%, rgba(224, 33, 138, 0.22) 0%, transparent 55%),
-        radial-gradient(circle at 50% 100%, rgba(224, 33, 138, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 10% 10%, rgba(255, 0, 175, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(255, 0, 175, 0.07) 0%, transparent 45%);
       background-attachment: fixed;
     }
 
-    .container {
+    /* Container Principal */
+    .page-wrapper {
       width: 100%;
-      max-width: 460px;
+      max-width: 1200px; /* Expansão completa para Desktop */
       display: flex;
       flex-direction: column;
-      align-items: center;
+      gap: 24px;
     }
 
-    /* Cabeçalho */
-    .profile {
+    /* ================= IDENTIDADE DA MARCA ================= */
+    .brand-header {
       text-align: center;
-      margin-bottom: 26px;
+      padding: 10px 0 16px;
     }
 
-    .avatar-wrapper {
-      width: 96px;
-      height: 96px;
+    .brand-logo-wrap {
+      width: 110px;
+      height: 110px;
       margin: 0 auto 14px;
       border-radius: 50%;
-      padding: 3px;
-      background: linear-gradient(135deg, var(--pink-primary), #63123c);
-      box-shadow: 0 8px 24px rgba(224, 33, 138, 0.35);
+      padding: 4px;
+      background: linear-gradient(135deg, var(--pink-vibrant), #ff85cb);
+      box-shadow: 0 10px 25px var(--pink-glow);
     }
 
-    .avatar {
+    .brand-logo {
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      background-color: #17171c;
+      background: var(--white);
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
     }
 
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .brand-logo img {
+      width: 82%;
+      height: 82%;
+      object-fit: contain;
     }
 
-    .avatar i {
-      font-size: 2rem;
-      color: var(--pink-primary);
-    }
-
-    .title {
-      font-size: 1.3rem;
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 2.4rem;
       font-weight: 700;
       letter-spacing: -0.01em;
-      margin-bottom: 4px;
+      color: var(--pink-vibrant);
+      line-height: 1.1;
     }
 
-    .subtitle {
-      font-size: 0.86rem;
+    .brand-cursive {
+      display: block;
+      font-family: var(--font-script);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--pink-vibrant);
+      margin-top: -6px;
+      text-transform: capitalize;
+    }
+
+    .brand-tagline {
+      font-size: 0.88rem;
       color: var(--text-muted);
-      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 6px;
     }
 
-    /* Lista de Botões */
-    .links-list {
-      width: 100%;
+    /* ================= ESTRUTURA RESPONSIVA ================= */
+    .main-content {
       display: flex;
       flex-direction: column;
-      gap: 13px;
-      margin-bottom: 34px;
+      gap: 24px;
+      width: 100%;
     }
 
-    .btn-link {
+    /* No Desktop: Vira um grid de vitrine moderno com duas colunas */
+    @media (min-width: 992px) {
+      body {
+        padding: 48px 32px;
+      }
+
+      .main-content {
+        display: grid;
+        grid-template-columns: 360px 1fr;
+        align-items: start;
+        gap: 32px;
+      }
+
+      .brand-header {
+        position: sticky;
+        top: 32px;
+        text-align: center;
+      }
+    }
+
+    /* ================= BOTÕES / LINKS ================= */
+    .links-column {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+    }
+
+    .link-btn {
       display: flex;
       align-items: center;
-      padding: 16px 20px;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 14px;
+      padding: 18px 20px;
+      background: var(--white);
+      border: 1px solid var(--pink-border);
+      border-radius: 16px;
       text-decoration: none;
-      color: var(--text-main);
+      color: var(--text-dark);
       font-weight: 600;
-      font-size: 0.94rem;
-      backdrop-filter: blur(14px);
-      transition: all 0.22s ease-in-out;
-      cursor: pointer;
+      font-size: 0.98rem;
+      box-shadow: var(--shadow-card);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .btn-link i:first-child {
-      font-size: 1.3rem;
-      width: 34px;
-      color: var(--pink-primary);
+    .link-btn i.icon-prefix {
+      font-size: 1.35rem;
+      width: 36px;
+      color: var(--pink-vibrant);
       transition: transform 0.2s ease;
     }
 
-    .btn-link .label {
+    .link-btn .btn-text {
       flex: 1;
+      display: flex;
+      flex-direction: column;
       text-align: left;
     }
 
-    .btn-link .arrow {
+    .link-btn .btn-text strong {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      line-height: 1.2;
+    }
+
+    .link-btn .btn-text span {
+      font-size: 0.78rem;
       color: var(--text-muted);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .link-btn .arrow {
+      color: var(--pink-vibrant);
       font-size: 0.85rem;
-      transition: transform 0.2s ease, color 0.2s ease;
+      transition: transform 0.2s ease;
     }
 
-    .btn-link:hover, .btn-link:active {
-      transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(224, 33, 138, 0.45);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 12px rgba(224, 33, 138, 0.2);
+    .link-btn:hover, .link-btn:active {
+      transform: translateY(-3px);
+      border-color: var(--pink-vibrant);
+      box-shadow: 0 12px 28px rgba(255, 0, 175, 0.18);
     }
 
-    .btn-link:hover i:first-child, .btn-link:active i:first-child {
-      transform: scale(1.1);
+    .link-btn:hover i.icon-prefix, .link-btn:active i.icon-prefix {
+      transform: scale(1.12);
     }
 
-    .btn-link:hover .arrow, .btn-link:active .arrow {
-      color: var(--pink-primary);
-      transform: translateX(3px);
+    .link-btn:hover .arrow, .link-btn:active .arrow {
+      transform: translateX(4px);
     }
 
-    /* WhatsApp com destaque verde sutil */
-    .btn-whatsapp {
-      background: linear-gradient(135deg, rgba(37, 211, 102, 0.12), rgba(37, 211, 102, 0.02));
-      border-color: rgba(37, 211, 102, 0.3);
+    /* Botão Especial WhatsApp */
+    .btn-wpp {
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.08), #ffffff);
+      border-color: rgba(37, 211, 102, 0.35);
     }
 
-    .btn-whatsapp i:first-child {
-      color: var(--green-whatsapp);
+    .btn-wpp i.icon-prefix {
+      color: var(--green-wpp);
     }
 
-    .btn-whatsapp:hover, .btn-whatsapp:active {
-      border-color: var(--green-whatsapp);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 14px rgba(37, 211, 102, 0.25);
+    .btn-wpp:hover, .btn-wpp:active {
+      border-color: var(--green-wpp);
+      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.2);
     }
 
-    .btn-whatsapp:hover .arrow, .btn-whatsapp:active .arrow {
-      color: var(--green-whatsapp);
+    .btn-wpp .arrow {
+      color: var(--green-wpp);
     }
 
-    /* Galeria do Ambiente / Loja Física */
-    .gallery-section {
-      width: 100%;
-      margin-bottom: 28px;
+    /* ================= VITRINE & CATÁLOGOS NO DESKTOP ================= */
+    .catalog-showcase {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
     }
 
-    .section-title {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 12px;
+    @media (min-width: 680px) {
+      .catalog-showcase {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .catalog-card {
+      background: var(--white);
+      border: 1px solid var(--pink-border);
+      border-radius: 18px;
+      padding: 24px 20px;
+      text-decoration: none;
+      color: var(--text-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
+      box-shadow: var(--shadow-card);
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .catalog-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--pink-vibrant);
+      transform: scaleX(0);
+      transition: transform 0.25s ease;
+    }
+
+    .catalog-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .catalog-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--pink-vibrant);
+      box-shadow: 0 16px 36px rgba(255, 0, 175, 0.16);
+    }
+
+    .catalog-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--pink-light);
+      color: var(--pink-vibrant);
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 14px;
+    }
+
+    .catalog-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--pink-vibrant);
+      margin-bottom: 4px;
+    }
+
+    .catalog-card p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .catalog-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--pink-vibrant);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ================= GALERIA DO AMBIENTE ================= */
+    .store-gallery-wrap {
+      background: var(--white);
+      border: 1px solid var(--pink-border);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      color: var(--pink-vibrant);
+      display: flex;
+      align-items: center;
       gap: 8px;
     }
 
-    .section-title i {
-      color: var(--pink-primary);
+    .section-header span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
     }
 
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+      gap: 14px;
     }
 
-    .gallery-item {
+    @media (min-width: 992px) {
+      .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .gallery-card {
       position: relative;
-      border-radius: 12px;
+      border-radius: 14px;
       overflow: hidden;
       aspect-ratio: 4 / 3;
-      border: 1px solid var(--card-border);
-      background: #15151a;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      background: #f0f0f3;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .gallery-item img {
+    .gallery-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.3s ease;
+      transition: transform 0.35s ease;
     }
 
-    .gallery-item:hover {
-      transform: translateY(-2px);
-      border-color: rgba(224, 33, 138, 0.4);
+    .gallery-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     }
 
-    .gallery-item:hover img {
-      transform: scale(1.04);
+    .gallery-card:hover img {
+      transform: scale(1.06);
     }
 
-    .gallery-item .overlay-caption {
+    .gallery-caption {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
-      padding: 18px 8px 6px;
+      background: linear-gradient(to top, rgba(34, 28, 32, 0.85), transparent);
+      padding: 20px 8px 6px;
       font-size: 0.72rem;
-      color: #eee;
+      font-weight: 600;
+      color: #ffffff;
       text-align: center;
     }
 
-    /* Endereço por extenso */
-    .address-card {
-      width: 100%;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 14px;
-      padding: 14px 18px;
+    /* Card de Endereço Físico */
+    .location-box {
+      background: var(--white);
+      border: 1px solid var(--pink-border);
+      border-radius: 16px;
+      padding: 16px;
       text-align: center;
-      margin-bottom: 28px;
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       color: var(--text-muted);
       line-height: 1.5;
+      box-shadow: var(--shadow-card);
     }
 
-    .address-card strong {
-      color: var(--text-main);
+    .location-box strong {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      color: var(--pink-vibrant);
       display: block;
       margin-bottom: 2px;
     }
 
     /* Rodapé */
     .footer {
-      font-size: 0.74rem;
+      font-size: 0.76rem;
       color: var(--text-muted);
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       text-align: center;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
 
-  <main class="container">
+  <div class="page-wrapper">
     
-    <!-- Perfil -->
-    <header class="profile">
-      <div class="avatar-wrapper">
-        <div class="avatar">
-          <!-- Quando subir seu arquivo 'logo.png' no GitHub, descomente a linha abaixo e remova a tag <i> -->
-          <!-- <img src="logo.png" alt="Rosa Pink Lingerie"> -->
-          <i class="fa-solid fa-gem"></i>
-        </div>
-      </div>
-      <h1 class="title">Rosa Pink Lingerie</h1>
-      <p class="subtitle">Moda Íntima, Elegância & Sexshop</p>
-    </header>
+    <div class="main-content">
+      
+      <!-- COLUNA DA ESQUERDA: Perfil, Ações Rápidas e Localização -->
+      <aside class="sidebar">
+        
+        <!-- Cabeçalho com Logo e Tipografia Oficial -->
+        <header class="brand-header">
+          <div class="brand-logo-wrap">
+            <div class="brand-logo">
+              <!-- Sobe a imagem como logo.png no repositório -->
+              <img src="logo.png" alt="Rosa Pink Lingerie" onerror="this.src='Iso PNG Rosa.png'">
+            </div>
+          </div>
+          <h1 class="brand-title">Rosa Pink</h1>
+          <span class="brand-cursive">Lingerie</span>
+          <p class="brand-tagline">Moda Íntima & Sexshop Especializado</p>
+        </header>
 
-    <!-- Botões Principais -->
-    <nav class="links-list">
-      <!-- 1. WhatsApp Oficial -->
-      <a href="https://wa.me/5544984023187?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener noreferrer" class="btn-link btn-whatsapp">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span class="label">Atendimento WhatsApp</span>
-        <i class="fa-solid fa-chevron-right arrow"></i>
-      </a>
+        <!-- Botões Principais / Ações Imediatas -->
+        <nav class="links-column">
+          <!-- WhatsApp Oficial -->
+          <a href="https://wa.me/5544984023187?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener noreferrer" class="link-btn btn-wpp">
+            <i class="fa-brands fa-whatsapp icon-prefix"></i>
+            <div class="btn-text">
+              <strong>Atendimento WhatsApp</strong>
+              <span>Converse com nossas consultoras</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+          </a>
 
-      <!-- 2. Catálogo de Lingerie -->
-      <a href="https://rosapinknamorados.lojazap.com/" target="_blank" rel="noopener noreferrer" class="btn-link">
-        <i class="fa-solid fa-shirt"></i>
-        <span class="label">Catálogo de Lingerie</span>
-        <i class="fa-solid fa-chevron-right arrow"></i>
-      </a>
+          <!-- Botão Dinâmico Maps (Apple Maps no iOS/Mac vs Google Maps no Android/PC) -->
+          <a id="btn-maps" href="#" target="_blank" rel="noopener noreferrer" class="link-btn">
+            <i class="fa-solid fa-location-dot icon-prefix"></i>
+            <div class="btn-text">
+              <strong>Como Chegar na Loja</strong>
+              <span>Rota direta no seu aplicativo de GPS</span>
+            </div>
+            <i class="fa-solid fa-chevron-right arrow"></i>
+          </a>
 
-      <!-- 3. Catálogo de Sexshop -->
-      <a href="https://rosapink.lojazap.com/" target="_blank" rel="noopener noreferrer" class="btn-link">
-        <i class="fa-solid fa-heart"></i>
-        <span class="label">Catálogo de Sexshop</span>
-        <i class="fa-solid fa-chevron-right arrow"></i>
-      </a>
+          <!-- Endereço da Loja -->
+          <div class="location-box">
+            <strong>Loja Física em Umuarama</strong>
+            Av. Paraná, 4390 - Zona I<br>
+            Umuarama - PR, 87501-030
+          </div>
+        </nav>
 
-      <!-- 4. Rota Dinâmica (Apple Maps vs. Google Maps) -->
-      <a id="btn-maps" href="#" target="_blank" rel="noopener noreferrer" class="btn-link">
-        <i class="fa-solid fa-location-dot"></i>
-        <span class="label">Como Chegar na Loja</span>
-        <i class="fa-solid fa-chevron-right arrow"></i>
-      </a>
-    </nav>
+      </aside>
 
-    <!-- Fotos do Ambiente / Loja Física -->
-    <section class="gallery-section">
-      <h2 class="section-title">
-        <i class="fa-solid fa-camera"></i>
-        Conheça Nossa Loja
-      </h2>
-      <div class="gallery-grid">
-        <!-- Foto 1 -->
-        <div class="gallery-item">
-          <!-- Substitua o 'src' pelo nome do arquivo que subir no GitHub, ex: src="loja-1.jpg" -->
-          <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=600&q=80" alt="Ambiente Rosa Pink">
-          <span class="overlay-caption">Fachada & Entrada</span>
-        </div>
-        <!-- Foto 2 -->
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80" alt="Espaço Lingerie">
-          <span class="overlay-caption">Espaço Lingerie</span>
-        </div>
-      </div>
-    </section>
+      <!-- COLUNA DA DIREITA (AMPLA NO DESKTOP): Catálogos & Fotos da Loja -->
+      <main class="content-body">
+        
+        <!-- Vitrine Destacada de Catálogos (Lojazap) -->
+        <section class="catalog-showcase">
+          <!-- Catálogo Lingerie -->
+          <a href="https://rosapinknamorados.lojazap.com/" target="_blank" rel="noopener noreferrer" class="catalog-card">
+            <div class="catalog-icon">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
+            <h3>Catálogo de Lingerie</h3>
+            <p>Conjuntos exclusivos, rendas, pijamas e peças finas</p>
+            <span class="catalog-badge">Acessar Coleção <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
 
-    <!-- Card de Endereço Físico -->
-    <div class="address-card">
-      <strong>Loja Física em Umuarama</strong>
-      Av. Paraná, 4390 - Zona I<br>
-      Umuarama - PR, 87501-030
+          <!-- Catálogo Sexshop -->
+          <a href="https://rosapink.lojazap.com/" target="_blank" rel="noopener noreferrer" class="catalog-card">
+            <div class="catalog-icon">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <h3>Linha Sensual & Sexshop</h3>
+            <p>Cosméticos aromáticos, óleos corporais e acessórios</p>
+            <span class="catalog-badge">Acessar Vitrine <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </section>
+
+        <!-- Galeria do Ambiente / Google Meu Negócio -->
+        <section class="store-gallery-wrap">
+          <div class="section-header">
+            <h2><i class="fa-solid fa-store"></i> Nosso Espaço</h2>
+            <span>Venha nos visitar</span>
+          </div>
+
+          <div class="gallery-grid">
+            <!-- Foto 1 -->
+            <div class="gallery-card">
+              <img src="loja-1.jpg" onerror="this.src='https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=600&q=80'" alt="Entrada Rosa Pink">
+              <span class="gallery-caption">Fachada & Vitrine</span>
+            </div>
+            <!-- Foto 2 -->
+            <div class="gallery-card">
+              <img src="loja-2.jpg" onerror="this.src='https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80'" alt="Espaço Lingerie">
+              <span class="gallery-caption">Coleções Exclusivas</span>
+            </div>
+            <!-- Foto 3 -->
+            <div class="gallery-card">
+              <img src="loja-3.jpg" onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80'" alt="Espaço Sensual">
+              <span class="gallery-caption">Espaço Sensual</span>
+            </div>
+            <!-- Foto 4 -->
+            <div class="gallery-card">
+              <img src="loja-4.jpg" onerror="this.src='https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=600&q=80'" alt="Atendimento Personalizado">
+              <span class="gallery-caption">Atendimento Confortável</span>
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer">
+          © Rosa Pink Lingerie • Elegância, Conforto e Discrição
+        </footer>
+
+      </main>
+
     </div>
 
-    <!-- Rodapé -->
-    <footer class="footer">
-      Rosa Pink Lingerie & Sexshop • Todos os direitos reservados
-    </footer>
+  </div>
 
-  </main>
-
-  <!-- Script para Identificar Apple vs Android / Outros -->
+  <!-- Identificador de Dispositivo para GPS (Apple Maps vs Google Maps) -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const addressQuery = encodeURIComponent("Av. Paraná, 4390 - Zona I, Umuarama - PR, 87501-030");
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       const mapsButton = document.getElementById("btn-maps");
 
-      // Detecção de ecossistema Apple (iPhone, iPad, iPod ou Mac)
+      // Se for iOS ou Safari/Mac nativo
       const isApple = /iPad|iPhone|iPod|Macintosh/i.test(userAgent) && !window.MSStream;
 
       if (isApple) {
-        // Abre diretamente o Apple Maps no app nativo
         mapsButton.href = `maps://maps.apple.com/?q=${addressQuery}`;
       } else {
-        // Abre o Google Maps no Android ou navegador no PC
         mapsButton.href = `https://www.google.com/maps/search/?api=1&query=${addressQuery}`;
       }
     });
