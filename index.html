@@ -63,7 +63,7 @@
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      padding: 24px 16px 40px;
+      padding: 16px 16px 40px;
       position: relative;
       overflow-x: hidden;
       background-image: 
@@ -82,13 +82,13 @@
       z-index: 1;
     }
 
-    /* ================= LOGO EM DESTAQUE E ESPAÇO HARMONIZADO ================= */
+    /* ================= LOGO COLADA AO BOTÃO WHATSAPP ================= */
     .header-logo-only {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: -6px 0 2px;
-      margin-bottom: 2px;
+      padding: 0;
+      margin-bottom: -6px; /* Zera qualquer sensação de espaço vazio */
     }
 
     .logo-hero {
@@ -200,12 +200,13 @@
       transform: translateX(3px);
     }
 
-    /* ================= 2. BOTÕES DE CATÁLOGO (LARGOS E VERTICAIS) ================= */
+    /* ================= 2. BOTÕES DE CATÁLOGO MAIS ALTOS ================= */
     .btn-catalog-wide {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 20px;
+      min-height: 88px; /* Altura generosa e encorpada */
+      padding: 24px 22px;
       background: var(--card-dark);
       border: 1px solid var(--card-border);
       border-radius: var(--radius-default);
@@ -220,24 +221,24 @@
     .catalog-left {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 16px;
     }
 
     .catalog-icon-box {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.35rem;
+      font-size: 1.45rem;
       transition: var(--transition-smooth);
     }
 
     .catalog-info strong {
       display: block;
       font-family: var(--font-serif);
-      font-size: 1.25rem;
+      font-size: 1.34rem;
       font-weight: 600;
       color: var(--white);
       line-height: 1.15;
@@ -245,21 +246,21 @@
 
     .catalog-info span {
       display: block;
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       font-weight: 600;
       letter-spacing: 0.02em;
-      margin-top: 3px;
+      margin-top: 4px;
     }
 
     .arrow-catalog {
-      width: 32px;
-      height: 32px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.05);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.88rem;
+      font-size: 0.95rem;
       transition: var(--transition-smooth);
     }
 
@@ -495,7 +496,7 @@
 
   <main class="island-container">
     
-    <!-- Topo: Logo Oficial Ampliada e sem espaçamento ocioso -->
+    <!-- Topo: Logo Oficial Colada no Botão -->
     <header class="header-logo-only">
       <img src="Iso PNG Rosa.png" alt="Rosa Pink Lingerie" class="logo-hero">
     </header>
@@ -517,7 +518,7 @@
       </div>
     </a>
 
-    <!-- 2º PRIORIDADE: Catálogos Largos (Um abaixo do outro) -->
+    <!-- 2º PRIORIDADE: Catálogos Mais Altos (Imponentes e Verticais) -->
     
     <!-- Catálogo Lingerie (Rosa) -->
     <a href="https://rosapinknamorados.lojazap.com/" target="_blank" rel="noopener noreferrer" class="btn-catalog-wide btn-catalog-lingerie">
@@ -566,12 +567,12 @@
         <!-- 2: Antigo Showroom agora 2º e chamado de Ambiente -->
         <div class="slide-item">
           <img src="loja 2.webp" alt="Ambiente Rosa Pink" loading="lazy">
-          <div class="slide-overlay">Entrada</div>
+          <div class="slide-overlay">Ambiente</div>
         </div>
         <!-- 3: Interior Loja 1 -->
         <div class="slide-item">
           <img src="loja 1.webp" alt="Showroom Lingerie" loading="lazy">
-          <div class="slide-overlay">Ambiente</div>
+          <div class="slide-overlay">Showroom</div>
         </div>
         <!-- 4: Espaço Sexshop -->
         <div class="slide-item">
