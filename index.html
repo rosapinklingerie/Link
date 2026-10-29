@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosa Pink Lingerie & Sexshop | Links Oficiais</title>
+  
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-color: #0b0b0e;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --pink-primary: #e0218a;
+      --pink-hover: #ff3399;
+      --text-main: #f5f5f7;
+      --text-muted: #9e9ea7;
+      --green-whatsapp: #25d366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 18px 30px;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(224, 33, 138, 0.22) 0%, transparent 55%),
+        radial-gradient(circle at 50% 100%, rgba(224, 33, 138, 0.1) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 460px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Cabeçalho */
+    .profile {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .avatar-wrapper {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, var(--pink-primary), #63123c);
+      box-shadow: 0 8px 24px rgba(224, 33, 138, 0.35);
+    }
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #17171c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .avatar i {
+      font-size: 2rem;
+      color: var(--pink-primary);
+    }
+
+    .title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Lista de Botões */
+    .links-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      margin-bottom: 34px;
+    }
+
+    .btn-link {
+      display: flex;
+      align-items: center;
+      padding: 16px 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 0.94rem;
+      backdrop-filter: blur(14px);
+      transition: all 0.22s ease-in-out;
+      cursor: pointer;
+    }
+
+    .btn-link i:first-child {
+      font-size: 1.3rem;
+      width: 34px;
+      color: var(--pink-primary);
+      transition: transform 0.2s ease;
+    }
+
+    .btn-link .label {
+      flex: 1;
+      text-align: left;
+    }
+
+    .btn-link .arrow {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-link:hover, .btn-link:active {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(224, 33, 138, 0.45);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 12px rgba(224, 33, 138, 0.2);
+    }
+
+    .btn-link:hover i:first-child, .btn-link:active i:first-child {
+      transform: scale(1.1);
+    }
+
+    .btn-link:hover .arrow, .btn-link:active .arrow {
+      color: var(--pink-primary);
+      transform: translateX(3px);
+    }
+
+    /* WhatsApp com destaque verde sutil */
+    .btn-whatsapp {
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.12), rgba(37, 211, 102, 0.02));
+      border-color: rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp i:first-child {
+      color: var(--green-whatsapp);
+    }
+
+    .btn-whatsapp:hover, .btn-whatsapp:active {
+      border-color: var(--green-whatsapp);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 14px rgba(37, 211, 102, 0.25);
+    }
+
+    .btn-whatsapp:hover .arrow, .btn-whatsapp:active .arrow {
+      color: var(--green-whatsapp);
+    }
+
+    /* Galeria do Ambiente / Loja Física */
+    .gallery-section {
+      width: 100%;
+      margin-bottom: 28px;
+    }
+
+    .section-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .section-title i {
+      color: var(--pink-primary);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      border: 1px solid var(--card-border);
+      background: #15151a;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-2px);
+      border-color: rgba(224, 33, 138, 0.4);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .gallery-item .overlay-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+      padding: 18px 8px 6px;
+      font-size: 0.72rem;
+      color: #eee;
+      text-align: center;
+    }
+
+    /* Endereço por extenso */
+    .address-card {
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 14px 18px;
+      text-align: center;
+      margin-bottom: 28px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .address-card strong {
+      color: var(--text-main);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* Rodapé */
+    .footer {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    
+    <!-- Perfil -->
+    <header class="profile">
+      <div class="avatar-wrapper">
+        <div class="avatar">
+          <!-- Quando subir seu arquivo 'logo.png' no GitHub, descomente a linha abaixo e remova a tag <i> -->
+          <!-- <img src="logo.png" alt="Rosa Pink Lingerie"> -->
+          <i class="fa-solid fa-gem"></i>
+        </div>
+      </div>
+      <h1 class="title">Rosa Pink Lingerie</h1>
+      <p class="subtitle">Moda Íntima, Elegância & Sexshop</p>
+    </header>
+
+    <!-- Botões Principais -->
+    <nav class="links-list">
+      <!-- 1. WhatsApp Oficial -->
+      <a href="https://wa.me/5544984023187?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener noreferrer" class="btn-link btn-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="label">Atendimento WhatsApp</span>
+        <i class="fa-solid fa-chevron-right arrow"></i>
+      </a>
+
+      <!-- 2. Catálogo de Lingerie -->
+      <a href="https://rosapinknamorados.lojazap.com/" target="_blank" rel="noopener noreferrer" class="btn-link">
+        <i class="fa-solid fa-shirt"></i>
+        <span class="label">Catálogo de Lingerie</span>
+        <i class="fa-solid fa-chevron-right arrow"></i>
+      </a>
+
+      <!-- 3. Catálogo de Sexshop -->
+      <a href="https://rosapink.lojazap.com/" target="_blank" rel="noopener noreferrer" class="btn-link">
+        <i class="fa-solid fa-heart"></i>
+        <span class="label">Catálogo de Sexshop</span>
+        <i class="fa-solid fa-chevron-right arrow"></i>
+      </a>
+
+      <!-- 4. Rota Dinâmica (Apple Maps vs. Google Maps) -->
+      <a id="btn-maps" href="#" target="_blank" rel="noopener noreferrer" class="btn-link">
+        <i class="fa-solid fa-location-dot"></i>
+        <span class="label">Como Chegar na Loja</span>
+        <i class="fa-solid fa-chevron-right arrow"></i>
+      </a>
+    </nav>
+
+    <!-- Fotos do Ambiente / Loja Física -->
+    <section class="gallery-section">
+      <h2 class="section-title">
+        <i class="fa-solid fa-camera"></i>
+        Conheça Nossa Loja
+      </h2>
+      <div class="gallery-grid">
+        <!-- Foto 1 -->
+        <div class="gallery-item">
+          <!-- Substitua o 'src' pelo nome do arquivo que subir no GitHub, ex: src="loja-1.jpg" -->
+          <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=600&q=80" alt="Ambiente Rosa Pink">
+          <span class="overlay-caption">Fachada & Entrada</span>
+        </div>
+        <!-- Foto 2 -->
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80" alt="Espaço Lingerie">
+          <span class="overlay-caption">Espaço Lingerie</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card de Endereço Físico -->
+    <div class="address-card">
+      <strong>Loja Física em Umuarama</strong>
+      Av. Paraná, 4390 - Zona I<br>
+      Umuarama - PR, 87501-030
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      Rosa Pink Lingerie & Sexshop • Todos os direitos reservados
+    </footer>
+
+  </main>
+
+  <!-- Script para Identificar Apple vs Android / Outros -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const addressQuery = encodeURIComponent("Av. Paraná, 4390 - Zona I, Umuarama - PR, 87501-030");
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      const mapsButton = document.getElementById("btn-maps");
+
+      // Detecção de ecossistema Apple (iPhone, iPad, iPod ou Mac)
+      const isApple = /iPad|iPhone|iPod|Macintosh/i.test(userAgent) && !window.MSStream;
+
+      if (isApple) {
+        // Abre diretamente o Apple Maps no app nativo
+        mapsButton.href = `maps://maps.apple.com/?q=${addressQuery}`;
+      } else {
+        // Abre o Google Maps no Android ou navegador no PC
+        mapsButton.href = `https://www.google.com/maps/search/?api=1&query=${addressQuery}`;
+      }
+    });
+  </script>
+
+</body>
+</html>
