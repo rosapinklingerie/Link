@@ -6,8 +6,8 @@
   <title>Rosa Pink Lingerie & Sexshop</title>
   
   <!-- Favicon / Ícone de Aba -->
-  <link rel="icon" type="image/png" href="Icon RP.png">
-  <link rel="apple-touch-icon" href="Icon RP.png">
+  <link rel="icon" type="image/png" href="Iso PNG Rosa.png">
+  <link rel="apple-touch-icon" href="Iso PNG Rosa.png">
 
   <!-- Fontes de Luxo e Interface -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    /* Suporte nativo à Sloop Script se estiver no repositório */
     @font-face {
       font-family: 'Sloop Script';
       src: url('sloop-script.woff2') format('woff2'),
@@ -29,12 +28,16 @@
     }
 
     :root {
-      --bg-dark: #0d0c0f;              /* Preto nobre e profundo */
-      --card-dark: #16141a;            /* Fundo dos cartões com alto contraste */
+      --bg-dark: #0d0c0f;              /* Fundo escuro luxo */
+      --card-dark: #16141a;            /* Fundo dos botões */
       --card-border: rgba(255, 255, 255, 0.08);
-      --card-border-pink: rgba(255, 0, 175, 0.4);
+      
       --brand-pink: #ff00af;           /* Rosa oficial da marca */
       --brand-pink-glow: rgba(255, 0, 175, 0.35);
+      
+      --brand-red: #e61938;            /* Vermelho sensual para o Sexshop */
+      --brand-red-glow: rgba(230, 25, 56, 0.38);
+      
       --white: #ffffff;
       --text-muted: #a39ba1;
       --green-wpp: #25d366;
@@ -60,76 +63,59 @@
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      padding: 30px 16px 45px;
+      padding: 24px 16px 40px;
       position: relative;
       overflow-x: hidden;
       background-image: 
-        radial-gradient(circle at 50% 0%, rgba(255, 0, 175, 0.16) 0%, transparent 65%),
-        radial-gradient(circle at 50% 100%, rgba(255, 0, 175, 0.08) 0%, transparent 60%);
+        radial-gradient(circle at 50% 0%, rgba(255, 0, 175, 0.14) 0%, transparent 60%),
+        radial-gradient(circle at 50% 100%, rgba(255, 0, 175, 0.06) 0%, transparent 60%);
       background-attachment: fixed;
     }
 
-    /* Container Central Unificado (Desktop & Mobile) */
+    /* Ilha Central Vertical */
     .island-container {
       width: 100%;
       max-width: 440px;
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 13px;
       z-index: 1;
     }
 
-    /* ================= LOGO EM DESTAQUE ================= */
+    /* ================= LOGO EM DESTAQUE E ESPAÇO HARMONIZADO ================= */
     .header-logo-only {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 10px 0 16px;
+      padding: 4px 0 2px;
+      margin-bottom: 2px;
     }
 
     .logo-hero {
-      width: 210px;
-      max-width: 78%;
+      width: 195px;
+      max-width: 76%;
       height: auto;
-      filter: drop-shadow(0 14px 30px var(--brand-pink-glow));
+      filter: drop-shadow(0 10px 24px var(--brand-pink-glow));
       transition: transform 0.3s ease;
       cursor: pointer;
     }
 
     .logo-hero:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
 
-    .trust-badge-line {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 14px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 6px 14px;
-      border-radius: 30px;
-      font-size: 0.74rem;
-      color: var(--text-muted);
-      letter-spacing: 0.04em;
-    }
-
-    .trust-badge-line i {
-      color: var(--brand-pink);
-    }
-
-    /* ================= 1. WHATSAPP HERO (CONVERSÃO MÁXIMA) ================= */
+    /* ================= 1. BOTÃO WHATSAPP ================= */
     .btn-wpp-master {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 18px 20px;
-      background: linear-gradient(135deg, #1b2d22 0%, #151d18 100%);
-      border: 1px solid rgba(37, 211, 102, 0.35);
+      background: linear-gradient(135deg, #18281e 0%, #131a15 100%);
+      border: 1px solid rgba(37, 211, 102, 0.32);
       border-radius: var(--radius-default);
       text-decoration: none;
       color: var(--white);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 0 18px rgba(37, 211, 102, 0.15);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45), 0 0 16px rgba(37, 211, 102, 0.12);
       position: relative;
       overflow: hidden;
       transition: var(--transition-smooth);
@@ -146,7 +132,7 @@
       width: 44px;
       height: 44px;
       border-radius: 12px;
-      background: rgba(37, 211, 102, 0.18);
+      background: rgba(37, 211, 102, 0.16);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -154,7 +140,6 @@
       color: var(--green-wpp);
     }
 
-    /* Ponto verde pulsante online */
     .pulse-dot {
       position: absolute;
       top: -2px;
@@ -163,7 +148,7 @@
       height: 10px;
       background-color: var(--green-wpp);
       border-radius: 50%;
-      border: 2px solid #151d18;
+      border: 2px solid #131a15;
       box-shadow: 0 0 8px var(--green-wpp);
       animation: pulseAnim 1.8s infinite;
     }
@@ -204,9 +189,9 @@
     }
 
     .btn-wpp-master:hover, .btn-wpp-master:active {
-      transform: translateY(-3px);
+      transform: translateY(-2px);
       border-color: var(--green-wpp);
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 25px rgba(37, 211, 102, 0.28);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55), 0 0 22px rgba(37, 211, 102, 0.24);
     }
 
     .btn-wpp-master:hover .arrow-action, .btn-wpp-master:active .arrow-action {
@@ -215,121 +200,141 @@
       transform: translateX(3px);
     }
 
-    /* ================= 2. VITRINE DE CATÁLOGOS ================= */
-    .catalogs-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .catalog-box {
+    /* ================= 2. BOTÕES DE CATÁLOGO (LARGOS E VERTICAIS) ================= */
+    .btn-catalog-wide {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
       background: var(--card-dark);
       border: 1px solid var(--card-border);
       border-radius: var(--radius-default);
-      padding: 22px 14px 18px;
       text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      position: relative;
+      color: var(--white);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
       transition: var(--transition-smooth);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+      position: relative;
       overflow: hidden;
     }
 
-    .catalog-box::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: var(--brand-pink);
-      opacity: 0;
-      transition: opacity 0.3s ease;
+    .catalog-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
     }
 
-    .catalog-tag {
-      position: absolute;
-      top: 10px;
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--brand-pink);
-      background: rgba(255, 0, 175, 0.12);
-      border: 1px solid rgba(255, 0, 175, 0.25);
-      padding: 2px 8px;
-      border-radius: 20px;
-    }
-
-    .catalog-box-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: var(--brand-pink);
+    .catalog-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.35rem;
-      margin: 12px 0 10px;
       transition: var(--transition-smooth);
     }
 
-    .catalog-box h3 {
+    .catalog-info strong {
+      display: block;
       font-family: var(--font-serif);
-      font-size: 1.28rem;
+      font-size: 1.25rem;
       font-weight: 600;
       color: var(--white);
-      line-height: 1.1;
-      margin-bottom: 5px;
+      line-height: 1.15;
     }
 
-    .catalog-box p {
-      font-size: 0.74rem;
-      color: var(--text-muted);
-      line-height: 1.35;
-      margin-bottom: 14px;
-      flex: 1;
+    .catalog-info span {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-top: 3px;
     }
 
-    .catalog-btn-label {
-      display: inline-flex;
+    .arrow-catalog {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
       align-items: center;
-      gap: 5px;
-      font-size: 0.76rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+      justify-content: center;
+      font-size: 0.88rem;
+      transition: var(--transition-smooth);
+    }
+
+    /* Variação Rosa: Catálogo Lingerie */
+    .btn-catalog-lingerie .catalog-icon-box {
+      background: rgba(255, 0, 175, 0.12);
+      border: 1px solid rgba(255, 0, 175, 0.25);
       color: var(--brand-pink);
     }
 
-    .catalog-box:hover, .catalog-box:active {
-      transform: translateY(-4px);
-      border-color: var(--card-border-pink);
-      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 0, 175, 0.18);
+    .btn-catalog-lingerie .catalog-info span {
+      color: var(--brand-pink);
     }
 
-    .catalog-box:hover::before, .catalog-box:active::before {
-      opacity: 1;
+    .btn-catalog-lingerie .arrow-catalog {
+      color: var(--brand-pink);
     }
 
-    .catalog-box:hover .catalog-box-icon, .catalog-box:active .catalog-box-icon {
+    .btn-catalog-lingerie:hover, .btn-catalog-lingerie:active {
+      transform: translateY(-2px);
+      border-color: rgba(255, 0, 175, 0.45);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0 20px var(--brand-pink-glow);
+    }
+
+    .btn-catalog-lingerie:hover .catalog-icon-box, .btn-catalog-lingerie:active .catalog-icon-box {
       background: var(--brand-pink);
       color: var(--white);
-      box-shadow: 0 0 18px var(--brand-pink-glow);
     }
 
-    /* ================= 3. FOTOS DO AMBIENTE (CARROSSEL) ================= */
+    .btn-catalog-lingerie:hover .arrow-catalog, .btn-catalog-lingerie:active .arrow-catalog {
+      background: var(--brand-pink);
+      color: var(--white);
+      transform: translateX(3px);
+    }
+
+    /* Variação Vermelha: Catálogo Sexshop */
+    .btn-catalog-sexshop .catalog-icon-box {
+      background: rgba(230, 25, 56, 0.14);
+      border: 1px solid rgba(230, 25, 56, 0.28);
+      color: var(--brand-red);
+    }
+
+    .btn-catalog-sexshop .catalog-info span {
+      color: var(--brand-red);
+    }
+
+    .btn-catalog-sexshop .arrow-catalog {
+      color: var(--brand-red);
+    }
+
+    .btn-catalog-sexshop:hover, .btn-catalog-sexshop:active {
+      transform: translateY(-2px);
+      border-color: rgba(230, 25, 56, 0.48);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0 22px var(--brand-red-glow);
+    }
+
+    .btn-catalog-sexshop:hover .catalog-icon-box, .btn-catalog-sexshop:active .catalog-icon-box {
+      background: var(--brand-red);
+      color: var(--white);
+    }
+
+    .btn-catalog-sexshop:hover .arrow-catalog, .btn-catalog-sexshop:active .arrow-catalog {
+      background: var(--brand-red);
+      color: var(--white);
+      transform: translateX(3px);
+    }
+
+    /* ================= 3. FOTOS DO AMBIENTE ================= */
     .store-gallery-box {
       background: var(--card-dark);
       border: 1px solid var(--card-border);
       border-radius: var(--radius-default);
       padding: 16px 14px 18px;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+      margin-top: 2px;
     }
 
     .gallery-top-bar {
@@ -411,7 +416,7 @@
       transform: scale(1.08);
     }
 
-    /* ================= 4. LOCALIZAÇÃO (ÚLTIMO BOTÃO) ================= */
+    /* ================= 4. LOCALIZAÇÃO ================= */
     .btn-maps-action {
       display: flex;
       align-items: center;
@@ -467,7 +472,7 @@
 
     .btn-maps-action:hover, .btn-maps-action:active {
       transform: translateY(-2px);
-      border-color: var(--card-border-pink);
+      border-color: rgba(255, 0, 175, 0.35);
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0 18px rgba(255, 0, 175, 0.14);
     }
 
@@ -476,13 +481,13 @@
       color: var(--brand-pink);
     }
 
-    /* Rodapé Minimalista */
+    /* Rodapé */
     .footer-note {
       text-align: center;
       font-size: 0.72rem;
       color: #6a6167;
       letter-spacing: 0.05em;
-      margin-top: 6px;
+      margin-top: 4px;
     }
   </style>
 </head>
@@ -490,16 +495,12 @@
 
   <main class="island-container">
     
-    <!-- Topo: Apenas a Logo Oficial Ampliada (Sem poluição de textos redundantes) -->
+    <!-- Topo: Logo Oficial Ampliada e sem espaçamento ocioso -->
     <header class="header-logo-only">
       <img src="Iso PNG Rosa.png" alt="Rosa Pink Lingerie" class="logo-hero">
-      <div class="trust-badge-line">
-        <i class="fa-solid fa-shield-heart"></i>
-        <span>Atendimento Personalizado & Discrição</span>
-      </div>
     </header>
 
-    <!-- 1º PRIORIDADE (CRO): WhatsApp Oficial com Status Ativo Online -->
+    <!-- 1º PRIORIDADE: WhatsApp Oficial -->
     <a href="https://wa.me/5544984023187?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener noreferrer" class="btn-wpp-master">
       <div class="wpp-left-content">
         <div class="wpp-icon-wrapper">
@@ -516,32 +517,41 @@
       </div>
     </a>
 
-    <!-- 2º PRIORIDADE: Catálogos com Alta Ergonomia Visual -->
-    <section class="catalogs-container">
-      <!-- Catálogo de Lingerie -->
-      <a href="https://rosapinknamorados.lojazap.com/" target="_blank" rel="noopener noreferrer" class="catalog-box">
-        <span class="catalog-tag">Destaque</span>
-        <div class="catalog-box-icon">
+    <!-- 2º PRIORIDADE: Catálogos Largos (Um abaixo do outro) -->
+    
+    <!-- Catálogo Lingerie (Rosa) -->
+    <a href="https://rosapinknamorados.lojazap.com/" target="_blank" rel="noopener noreferrer" class="btn-catalog-wide btn-catalog-lingerie">
+      <div class="catalog-left">
+        <div class="catalog-icon-box">
           <i class="fa-solid fa-gem"></i>
         </div>
-        <h3>Lingerie</h3>
-        <p>Rendas exclusivas, lingeries e pijamas finos</p>
-        <span class="catalog-btn-label">Ver Vitrine <i class="fa-solid fa-arrow-right"></i></span>
-      </a>
+        <div class="catalog-info">
+          <strong>Catálogo Lingerie</strong>
+          <span>Conheça nossas lingeries.</span>
+        </div>
+      </div>
+      <div class="arrow-catalog">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </a>
 
-      <!-- Catálogo Sexshop -->
-      <a href="https://rosapink.lojazap.com/" target="_blank" rel="noopener noreferrer" class="catalog-box">
-        <span class="catalog-tag">Sensual</span>
-        <div class="catalog-box-icon">
+    <!-- Catálogo Sexshop (Vermelho Sensual) -->
+    <a href="https://rosapink.lojazap.com/" target="_blank" rel="noopener noreferrer" class="btn-catalog-wide btn-catalog-sexshop">
+      <div class="catalog-left">
+        <div class="catalog-icon-box">
           <i class="fa-solid fa-heart"></i>
         </div>
-        <h3>Sexshop</h3>
-        <p>Cosméticos térmicos, óleos e momentos a dois</p>
-        <span class="catalog-btn-label">Conhecer <i class="fa-solid fa-arrow-right"></i></span>
-      </a>
-    </section>
+        <div class="catalog-info">
+          <strong>Catálogo Sexshop</strong>
+          <span>Descubra o novo!</span>
+        </div>
+      </div>
+      <div class="arrow-catalog">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </a>
 
-    <!-- 3º FOTOS DA LOJA: Nova Ordem Solicitada (Showroom em 2º chamado 'Ambiente') -->
+    <!-- 3º FOTOS DO AMBIENTE (Carrossel Horizontal com Ambiente em 2º) -->
     <section class="store-gallery-box">
       <div class="gallery-top-bar">
         <h4><i class="fa-solid fa-store"></i> Nosso Espaço Físico</h4>
@@ -556,12 +566,12 @@
         <!-- 2: Antigo Showroom agora 2º e chamado de Ambiente -->
         <div class="slide-item">
           <img src="loja 2.webp" alt="Ambiente Rosa Pink" loading="lazy">
-          <div class="slide-overlay">Ambiente</div>
+          <div class="slide-overlay">Entrada</div>
         </div>
         <!-- 3: Interior Loja 1 -->
         <div class="slide-item">
           <img src="loja 1.webp" alt="Showroom Lingerie" loading="lazy">
-          <div class="slide-overlay">Showroom</div>
+          <div class="slide-overlay">Ambiente</div>
         </div>
         <!-- 4: Espaço Sexshop -->
         <div class="slide-item">
@@ -576,7 +586,7 @@
       </div>
     </section>
 
-    <!-- 4º ÚLTIMO ELEMENTO: Localização com Rota Automática (Apple Maps vs Google Maps) -->
+    <!-- 4º ÚLTIMO ELEMENTO: Localização com Rota Dinâmica -->
     <a id="btn-maps" href="#" target="_blank" rel="noopener noreferrer" class="btn-maps-action">
       <div class="maps-info-left">
         <div class="maps-pin-box">
@@ -597,14 +607,13 @@
 
   </main>
 
-  <!-- Script Dinâmico de Navegação Apple Maps / Google Maps -->
+  <!-- Script Inteligente Apple Maps / Google Maps -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const addressQuery = encodeURIComponent("Av. Paraná, 4390 - Zona I, Umuarama - PR, 87501-030");
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       const mapsButton = document.getElementById("btn-maps");
 
-      // Detecção de ecossistema Apple (iPhone, iPad, iPod ou Mac)
       const isApple = /iPad|iPhone|iPod|Macintosh/i.test(userAgent) && !window.MSStream;
 
       if (isApple) {
